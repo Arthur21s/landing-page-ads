@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <img src="https://www.unifaat.com.br/uploads/Logo/2018/07/centro-universitario-unifaat-1530797134.png" alt="Unifaat">
+
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Bem-Vindo à Nossa Solução</h1>
+            <p>Simplifique sua vida com tecnologia de ponta.</p>
+            <!-- Botão que abre o Google Forms -->
+            <a href="https://forms.gle/Wpsu5NYrN6n7Q73p9" 
+               class="btn" 
+               target="_blank">
+               Fale Conosco
+            </a>
+        </div>
+    </header>
+
+    <section id="sobre" class="sobre">
+        <h2>Sobre Nós</h2>
+        <p>Somos especialistas em desenvolver soluções digitais que impulsionam seu negócio.</p>
+        <p>Nosso time é composto por profissionais altamente capacitados, comprometidos com a excelência e com a entrega de resultados concretos. Acreditamos que a tecnologia deve ser um meio para criar experiências únicas, melhorar a vida das pessoas e fomentar a sustentabilidade.</p>
+    </section>
+
+    <section id="recursos" class="recursos">
+        <h2>Recursos</h2>
+        <ul>
+            <li>✅ Sistema Responsivo</li>
+            <li>✅ Desenvolvimento de Softwares</li>
+            <li>✅ Integrações Fáceis</li>
+            <li>✅ Segurança 100% Confiável</li>
+            <li>✅ Suporte Dedicado</li>
+            <li>✅ Desenvolvimento de IA</li>
+        </ul>
+    </section>
+    
+    <!-- Formulário interno usando FormSubmit -->
+    <section id="contato" class="contato">
+        <h2>Entre em contato</h2>
+        <form action="https://formsubmit.co/arthur.hen77@gmail.com" method="POST">
+            <input type="text" name="nome" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu Email" required>
+            <textarea name="mensagem" placeholder="Deixe sua Mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+
+            <!-- Configurações extras -->
+            <input type="hidden" name="_next" value="obrigado.html">
+            <input type="hidden" name="_captcha" value="false">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 @arthurr.h06. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
