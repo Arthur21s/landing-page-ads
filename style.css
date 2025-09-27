@@ -118,6 +118,7 @@ header.hero {
 section {
   padding: 1.5rem 1.5rem;
   max-width: 1000px;
+  /* Centraliza para desktop */
   margin: 10px auto; 
 }
 
