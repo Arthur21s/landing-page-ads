@@ -1,3 +1,4 @@
+/* GLOBAL */
 * {
   margin: 0;
   padding: 0;
@@ -6,12 +7,23 @@
 }
 
 body {
-  font-family: "Segoe UI", sans-serif;
-  line-height: 1.5;
+  /* Tipografia Poppins aplicada */
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6; 
   color: whitesmoke;
   background: url(https://media.istockphoto.com/id/1432473911/pt/foto/abstract-blue-background-or-dark-paper-with-bright-center-spotlight-and-black-vignette-border.jpg?s=612x612&w=0&k=20&c=s_5te9-nxVEHIP_pQs41h5Ivhm1TlIwjBjC6IW08B8o=);
 }
 
+/* Hierarquia de Títulos */
+h1 {
+    font-weight: 700; 
+}
+
+h2 {
+    font-weight: 600; 
+}
+
+/* --- NAVBAR --- */
 .navbar {
   position: fixed;
   top: 0;
@@ -29,10 +41,9 @@ body {
 }
 
 .navbar img {
-    height: 60px; /* Ajusta o tamanho da logo no desktop */
+    height: 60px; 
 }
 
-/* Esconde o botão de menu Hamburger no desktop */
 .menu-toggle {
     display: none; 
 }
@@ -58,6 +69,8 @@ body {
   color: #f39c12;
 }
 
+
+/* --- SEÇÃO HERO --- */
 header.hero {
   background: url('https://images3.alphacoders.com/137/1378932.png') no-repeat center center/cover;
   color: #fff;
@@ -80,25 +93,31 @@ header.hero {
   margin-bottom: 1rem;
 }
 
+/* Botão com novo estilo e animação de pulso */
 .hero .btn {
-  margin-top: 1rem;
+  margin-top: 1.5rem; 
   display: inline-block;
   background: #f39c12;
   color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
+  padding: 1rem 2rem; 
+  border-radius: 50px; 
   text-decoration: none;
+  font-weight: 600;
+  
+  animation: pulse 2s infinite; 
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .hero .btn:hover {
   background-color: #189200;
-   transition: background-color 0.3s;
+  transform: scale(1.05); 
+  animation: none; 
 }
 
+/* --- SEÇÕES GERAIS --- */
 section {
   padding: 1.5rem 1.5rem;
   max-width: 1000px;
-  /* Configuração para Desktop: Centraliza com margem lateral grande */
   margin: 10px auto; 
 }
 
@@ -109,6 +128,7 @@ section h2 {
   text-align: center;
   padding: 0.7rem;
 }
+
 
 /* --- UPGRADE: SEÇÃO SOBRE NÓS --- */
 .sobre {
@@ -138,7 +158,7 @@ section h2 {
 }
 
 .recursos ul {
-    /* Novo: Usa Grid para layout de 3 colunas no desktop */
+    /* Layout de Grid para Cards */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem; 
@@ -147,7 +167,6 @@ section h2 {
 }
 
 .recursos li {
-    /* Estilo de cada Card de Recurso */
     background-color: #1a2a6a; 
     color: whitesmoke;
     padding: 1.5rem;
@@ -187,7 +206,6 @@ form textarea {
   color: black; 
 }
 
-/* Novo: Estilo de Foco nos Campos do Formulário */
 form input:focus,
 form textarea:focus {
     border-color: #f39c12; 
@@ -196,7 +214,7 @@ form textarea:focus {
 }
 
 form button {
-  padding: 0.9rem; /* Padding aumentado */
+  padding: 0.9rem; 
   background: #f39c12;
   color: white;
   border: none;
@@ -211,6 +229,7 @@ form button:hover {
    transition: background-color 0.3s;
 }
 
+/* --- FOOTER --- */
 footer {
   text-align: center;
   padding: 1.5rem;
@@ -231,7 +250,7 @@ section, header.hero {
 /* 1. Estilos para telas até 768px (Tablets e Celulares) */
 @media (max-width: 768px) {
     
-    /* 1.1. Navbar: Ajustes e Layout Mobile */
+    /* 1.1. Navbar: Ajustes Mobile */
     .navbar {
         padding: 0.3rem 1rem; 
     }
@@ -240,7 +259,6 @@ section, header.hero {
         height: 50px; 
     }
 
-    /* Mostra o ícone Hamburger */
     .menu-toggle {
         display: block; 
         font-size: 2rem;
@@ -248,22 +266,18 @@ section, header.hero {
         z-index: 1001; 
     }
 
-    /* Posicionamento do Menu Mobile */
     .navbar .nav-links {
         position: absolute;
         top: 60px; 
         left: 0;
         width: 100%;
-        
         flex-direction: column;
         align-items: center;
-        
         background-color: #041042; 
         border-radius: 0;
         padding: 1rem 0;
         gap: 0.5rem;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        
         display: none; 
     }
 
@@ -275,20 +289,16 @@ section, header.hero {
         text-align: center;
     }
 
-    /* Classe ativada por JS para mostrar o menu */
     .navbar .nav-links.active {
         display: flex; 
     }
     
-    /* 1.2. Hero: Diminui a fonte principal */
+    /* 1.2. Hero: Diminui a fonte */
     .hero-content {
         padding: 1.5rem;
     }
     .hero h1 {
         font-size: 2rem;
-    }
-    .hero p {
-        font-size: 1rem;
     }
     
     /* 1.3. Seções: Garante que as seções usem a tela inteira */
@@ -305,14 +315,26 @@ section, header.hero {
 
 /* 2. Estilos para telas até 480px (Celulares pequenos) */
 @media (max-width: 480px) {
-    /* Diminui a fonte do Hero ainda mais para caber na tela */
     .hero h1 {
         font-size: 1.6rem;
     }
     
-    /* Diminui o padding do rodapé */
     footer {
         padding: 1rem 0.5rem;
         font-size: 0.8rem;
+    }
+}
+
+
+/* --- ANIMAÇÃO PARA O BOTÃO PRINCIPAL (DEVE FICAR NO FINAL) --- */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(243, 156, 18, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(243, 156, 18, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(243, 156, 18, 0);
     }
 }
