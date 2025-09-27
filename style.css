@@ -60,13 +60,18 @@ h2 {
   text-decoration: none;
 }
 
+/* Novo estilo do link e do hover */
 .navbar .nav-links a {
     color: black;
     text-decoration: none;
+    padding: 0.5rem 0.75rem; /* Adiciona padding para o fundo do hover */
+    border-radius: 15px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .navbar .nav-links a:hover {
-  color: #f39c12;
+  color: #041042; 
+  background-color: #f39c12; /* Fundo laranja no hover */
 }
 
 
@@ -282,12 +287,14 @@ section, header.hero {
         display: none; 
     }
 
+    /* Ajuste de cor e padding para link no menu mobile */
     .navbar .nav-links a {
         color: whitesmoke;
         padding: 0.5rem 0;
         display: block;
         width: 100%;
         text-align: center;
+        background-color: transparent; /* Remove o fundo laranja do hover no mobile */
     }
 
     .navbar .nav-links.active {

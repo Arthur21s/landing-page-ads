@@ -4,9 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Obrigado!</title>
-  <link rel="stylesheet" href="style.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css"> 
+  
   <style>
+    /* Estilos específicos para a página de agradecimento */
+    body {
+        /* Garante que o fundo da landing page seja usado */
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
     .thanks-container {
+      font-family: 'Poppins', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -14,10 +28,13 @@
       height: 100vh;
       text-align: center;
       color: white;
+      /* Fundo semi-transparente para o conteúdo */
+      background-color: rgba(0, 0, 0, 0.5); 
     }
 
     .thanks-container h1 {
       font-size: 2.5rem;
+      font-weight: 700;
       margin-bottom: 1rem;
     }
 
@@ -26,26 +43,39 @@
       margin-bottom: 2rem;
     }
 
+    /* Estilo do botão de retorno (igual ao botão hero) */
     .thanks-container a {
       display: inline-block;
       background: #f39c12;
       color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 5px;
+      padding: 1rem 2rem; 
+      border-radius: 50px; /* Borda arredondada (Upgrade) */
       text-decoration: none;
+      font-weight: 600;
       transition: background-color 0.3s;
     }
 
     .thanks-container a:hover {
       background-color: #189200;
     }
+    
+    /* Responsividade */
+    @media (max-width: 600px) {
+        .thanks-container h1 {
+            font-size: 2rem;
+        }
+        .thanks-container p {
+            font-size: 1rem;
+            padding: 0 1rem;
+        }
+    }
   </style>
 </head>
 <body>
-  <div class="thanks-container">
-    <h1>Obrigado pelo contato! 🎉</h1>
-    <p>Recebemos sua mensagem e retornaremos em breve.</p>
-    <a href="index.html">Voltar para a página inicial</a>
-  </div>
+    <div class="thanks-container">
+        <h1>Mensagem Recebida!</h1>
+        <p>Agradecemos o seu contato. Entraremos em contato o mais breve possível.</p>
+        <a href="index.html">Voltar para a Página Inicial</a>
+    </div>
 </body>
 </html>
