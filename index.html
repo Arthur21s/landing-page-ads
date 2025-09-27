@@ -68,13 +68,16 @@
 
             <input type="text" name="nome" placeholder="Seu Nome" required>
             <input type="email" name="email" placeholder="Seu Email" required>
+            
+            <input type="hidden" name="_replyto" value="email">
+
             <textarea name="mensagem" placeholder="Deixe sua Mensagem" required></textarea>
             <button type="submit">Enviar</button>
 
             <input type="hidden" name="_next" value="obrigado.html">
+            <input type="hidden" name="_subject" value="Nova Mensagem do Seu Site!">
             <input type="hidden" name="_captcha" value="false">
             
-            <input type="hidden" name="_subject" value="Nova Mensagem do Seu Site!">
         </form>
     </section>
 
