@@ -4,8 +4,7 @@ const navLinks = document.querySelector('.nav-links');
 
 // Adiciona um "ouvinte de evento" para o clique no botão
 menuToggle.addEventListener('click', () => {
-    // Alterna a classe 'active' na lista de links.
-    // Se 'active' estiver lá, ele remove. Se não estiver, ele adiciona.
+    // Alterna a classe 'active' na lista de links para mostrar/esconder o menu.
     navLinks.classList.toggle('active');
 });
 
@@ -14,7 +13,7 @@ const links = document.querySelectorAll('.nav-links a');
 
 links.forEach(link => {
     link.addEventListener('click', () => {
-        // Remove a classe 'active' para fechar o menu após o clique
+        // Remove a classe 'active' para fechar o menu após o clique e navegação
         navLinks.classList.remove('active');
     });
 });
