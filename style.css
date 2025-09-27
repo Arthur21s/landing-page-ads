@@ -219,7 +219,8 @@ form textarea:focus {
     outline: none; 
 }
 
-form button {
+/* --- ESTILO PARA O BOTÃO DE SUBMIT FIXO (substitui o 'form button') --- */
+.submit-btn-fix {
   padding: 0.9rem; 
   background: #f39c12;
   color: white;
@@ -228,11 +229,13 @@ form button {
   cursor: pointer;
   font-weight: bold;
   letter-spacing: 1px;
+  width: 100%; 
+  margin-top: 0.5rem;
 }
 
-form button:hover {
+.submit-btn-fix:hover {
   background-color: #189200;
-   transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 
 /* --- FOOTER --- */
@@ -294,7 +297,7 @@ section, header.hero {
         display: block;
         width: 100%;
         text-align: center;
-        background-color: transparent; /* Remove o fundo laranja do hover no mobile */
+        background-color: transparent; 
     }
 
     .navbar .nav-links.active {
